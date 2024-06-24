@@ -11,6 +11,7 @@ public class LocatorsMethod extends Base {
 	
 	{
 	//locators
+		
 	WebElement showMessageButtonID=driver.findElement(By.id("button-one"));
 	WebElement classNameclearFix=driver.findElement(By.className("clearfix"));
 	WebElement getTotalButtonID=driver.findElement(By.id("button-two"));
@@ -72,7 +73,8 @@ public class LocatorsMethod extends Base {
 	 WebElement searchSubmitTagandId=driver.findElement(By.cssSelector("input#nav-search-submit-button"));
 	 WebElement indiaTextTagandId=driver.findElement(By.cssSelector("span#glow-ingress-line2"));
 
-	//css_selector- TagandClass
+	//css_selector- TagandClass 
+	
 	WebElement logoTagandClass =driver.findElement(By.cssSelector("span.nav-logo-locale"));
 	WebElement helloSiginTagandClass =driver.findElement(By.cssSelector("div.nav-line-1-container"));
 	WebElement backToTopFooterTagandClass =driver.findElement(By.cssSelector("span.navFooterBackToTopText"));
@@ -108,7 +110,7 @@ public class LocatorsMethod extends Base {
 	WebElement IndiaOrXpath=driver.findElement(By.xpath("//span[@id='glow-ingress-line2' or class='nav-line-']"));
 	WebElement OrXpath=driver.findElement(By.xpath("//input[@name='dropdown-selection-ubb' or id='ubbShipTo']"));
 
-	//Xpath with AND 
+	//Xpath with AND  
 	 WebElement amazonLogoAndXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' and @aria-label='Amazon']"));
 	 WebElement IndiaAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-2 nav-progressive-content'and @id='glow-ingress-line2']"));
 	 WebElement returnAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-1' and text()='Returns']"));

@@ -18,7 +18,7 @@ public class XpathLocator extends Base {
 		//Contains-Xpath
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 	
 		XpathLocator xpathLocator=new XpathLocator();
 		xpathLocator.initializeBrowser();
