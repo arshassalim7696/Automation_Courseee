@@ -1,0 +1,127 @@
+package testscript;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class LocatorsMethod extends Base {
+
+	
+	
+	public void locatorsMechanism()
+	
+	{
+	//locators
+	WebElement showMessageButtonID=driver.findElement(By.id("button-one"));
+	WebElement classNameclearFix=driver.findElement(By.className("clearfix"));
+	WebElement getTotalButtonID=driver.findElement(By.id("button-two"));
+	WebElement checkBoxlinkText=driver.findElement(By.linkText("Checkbox Demo"));
+	WebElement checkBoxPartiallinkText=driver.findElement(By.partialLinkText("Checkbox"));
+	WebElement nameElement=driver.findElement(By.name("viewport"));
+	WebElement tagNameElement=driver.findElement(By.tagName("title"));
+	
+	//css selector
+	WebElement tagandId =driver.findElement(By.cssSelector("button#button-one"));
+	WebElement tagandClass =driver.findElement(By.cssSelector("section.clearfix"));
+	WebElement tagandAttribute=driver.findElement(By.cssSelector("button[data-target='#collapsibleNavbar']"));
+	
+	//xpath
+	WebElement xPath=driver.findElement(By.xpath("//button[@id='button-one']"));
+
+	driver.navigate().to("https://www.amazon.com");//navigating to amzon
+	// driver.navigate().back(); //back to qabible
+    //driver.navigate().forward();//back to amazon*/
+	
+	//Element by ID 
+	
+	WebElement searchButtonID=driver.findElement(By.id("nav-search-submit-button"));
+	WebElement locIconID=driver.findElement(By.id("nav-packard-glow-loc-icon"));
+	WebElement helloSigninID=driver.findElement(By.id("nav-link-accountList-nav-line-1"));
+	WebElement searchDropDownID=driver.findElement(By.id("searchDropdownDescription"));
+	WebElement delivertoTextID=driver.findElement(By.id("glow-ingress-line1"));
+	WebElement indiaTextID=driver.findElement(By.id("glow-ingress-line2"));
+
+	//Element by class   
+	 WebElement logoClass=driver.findElement(By.className("nav-logo-locale"));
+	 WebElement helloSiginClass=driver.findElement(By.className("nav-line-1-container"));
+	 WebElement backtotopClass=driver.findElement(By.className("navFooterBackToTopText"));
+	 WebElement allClass=driver.findElement(By.className("hm-icon-label"));
+	 WebElement containerDesktopClass=driver.findElement(By.className("icp-container-desktop"));
+	 
+	 //Element by tagname
+	 WebElement allTextTagName=driver.findElement(By.tagName("span"));
+	 WebElement todayDealTagName=driver.findElement(By.tagName("a"));
+	 WebElement enTagName=driver.findElement(By.tagName("div"));
+	  
+		
+	 //Element by linktext
+	 WebElement careerslinkText=driver.findElement(By.linkText("Careers"));
+	 WebElement bloglinkText=driver.findElement(By.linkText("Blog"));
+	 WebElement aboutAmazonlinkText=driver.findElement(By.linkText("About Amazon"));
+	 WebElement investorRelationlinkText=driver.findElement(By.linkText("Investor Relations"));
+	 WebElement amazonDevicelinkText=driver.findElement(By.linkText("Amazon Devices"));
+		
+	//Element by patiallinktext
+	 WebElement shopWithPartiallinkText=driver.findElement(By.partialLinkText("Shop with"));
+	 WebElement amazonCurrencyPartiallinkText=driver.findElement(By.partialLinkText("Amazon Currency"));
+	 WebElement shippingRatesPartiallinkText=driver.findElement(By.partialLinkText("Shipping Rates"));
+	 WebElement amazonAndPartiallinkText=driver.findElement(By.partialLinkText("Amazon and"));
+	 WebElement selfPublishPartiallinkText=driver.findElement(By.partialLinkText("Self-Publish"));
+
+	//css_selector- TagandId
+	 WebElement searchboxTagandId=driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
+	 WebElement searchSubmitTagandId=driver.findElement(By.cssSelector("input#nav-search-submit-button"));
+	 WebElement indiaTextTagandId=driver.findElement(By.cssSelector("span#glow-ingress-line2"));
+
+	//css_selector- TagandClass
+	WebElement logoTagandClass =driver.findElement(By.cssSelector("span.nav-logo-locale"));
+	WebElement helloSiginTagandClass =driver.findElement(By.cssSelector("div.nav-line-1-container"));
+	WebElement backToTopFooterTagandClass =driver.findElement(By.cssSelector("span.navFooterBackToTopText"));
+
+	//css_selector- TagandAttribute
+	WebElement searchDropdownTagandAttribute=driver.findElement(By.cssSelector("select[title='Search in']"));
+    WebElement searchAmazonTagandAttribute=driver.findElement(By.cssSelector("input[placeholder='Search Amazon']"));
+    WebElement amazonLogoTagandAttribute=driver.findElement(By.cssSelector("a[aria-label='Amazon']"));
+
+   //xpath
+  	WebElement layouttoolbarXpath=driver.findElement(By.xpath("//div[@class='layoutToolbarPadding']"));
+  	WebElement amazonLogoxPath=driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']")); //spacevarunath eduthu no issue why?
+  	WebElement allMenubarxPath=driver.findElement(By.xpath("//a[@aria-label='Open Menu']")); 
+	
+  //Contains-Xpath
+	WebElement logoContainsXpath=driver.findElement(By.xpath("//a[contains(@id,'nav-lo')]"));
+	WebElement allcontainsXpath=driver.findElement(By.xpath("//span[contains(@class,'-icon-la')]"));
+	WebElement layoutToolbarContainsXpath=driver.findElement(By.xpath("//div[contains(@class,'layoutToolb')]"));
+
+	//starts-with Xpath
+	WebElement logoStartswithXpath=driver.findElement(By.xpath("//a[starts-with(@id,'nav-lo')]"));
+	WebElement allStartwithXpath=driver.findElement(By.xpath("//span[starts-with(@class,'hm-ic')]"));
+	WebElement layoutToolbarStartwithXpath=driver.findElement(By.xpath("//div[starts-with(@class,'layoutToolb')]"));
+    
+	//Xpath with innertext -text() method function  
+	WebElement aboutAmazonTextXpath=driver.findElement(By.xpath("//a[text()='About Amazon']"));
+	WebElement amazonpaymentTextXpath=driver.findElement(By.xpath("//div[text()='Amazon Payment Products']"));
+	WebElement headlineTextXpath=driver.findElement(By.xpath("//h2[text()='Have more fun with family']"));
+
+	//Xpath with OR 
+	
+	WebElement amazonLogoOrXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' or class='nav-logo-link nav-progressive-attribute']"));
+	WebElement IndiaOrXpath=driver.findElement(By.xpath("//span[@id='glow-ingress-line2' or class='nav-line-']"));
+	WebElement OrXpath=driver.findElement(By.xpath("//input[@name='dropdown-selection-ubb' or id='ubbShipTo']"));
+
+	//Xpath with AND 
+	 WebElement amazonLogoAndXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' and @aria-label='Amazon']"));
+	 WebElement IndiaAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-2 nav-progressive-content'and @id='glow-ingress-line2']"));
+	 WebElement returnAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-1' and text()='Returns']"));
+
+	}	
+	
+	public static void main(String[] args) {
+		
+		LocatorsMethod locators=new LocatorsMethod();
+		locators.initializeBrowser();
+		locators.locatorsMechanism();
+		locators.driverQuit();
+ 
+	}
+
+}
