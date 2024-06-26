@@ -106,15 +106,60 @@ public class LocatorsMethod extends Base {
 
 	//Xpath with OR 
 	
-	WebElement amazonLogoOrXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' or class='nav-logo-link nav-progressive-attribute']"));
-	WebElement IndiaOrXpath=driver.findElement(By.xpath("//span[@id='glow-ingress-line2' or class='nav-line-']"));
-	WebElement OrXpath=driver.findElement(By.xpath("//input[@name='dropdown-selection-ubb' or id='ubbShipTo']"));
+	WebElement amazonLogoOrXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' or @class='nav-logo-link nav-progressive-attribute']"));
+	WebElement IndiaOrXpath=driver.findElement(By.xpath("//span[@id='glow-ingress-line2' or @class='nav-line-']"));
+	WebElement OrXpath=driver.findElement(By.xpath("//input[@name='dropdown-selection-ubb' or @id='ubbShipTo']"));
 
 	//Xpath with AND  
 	 WebElement amazonLogoAndXpath=driver.findElement(By.xpath("//a[@id='nav-logo-sprites' and @aria-label='Amazon']"));
 	 WebElement IndiaAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-2 nav-progressive-content'and @id='glow-ingress-line2']"));
 	 WebElement returnAndXpath=driver.findElement(By.xpath("//span[@class='nav-line-1' and text()='Returns']"));
 
+	//axes Method
+	//following
+	 WebElement XpathFollowing1=driver.findElement(By.xpath("//div[@class='layoutToolbarPadding']//following::span[@id='nav-link-accountList-nav-line-1']")); 
+	 WebElement XpathFollowing2=driver.findElement(By.xpath("//span[@id='glow-ingress-line2']//following::input[@id='unifiedLocation1ClickAddress']")); 
+	 WebElement XpathFollowing3=driver.findElement(By.xpath("//span[@id='glow-ingress-line1']//following::input[@id='ubbShipTo']")); 
+     
+	 //preceding
+	 WebElement XpathPreceding1=driver.findElement(By.xpath("//div[@class='layoutToolbarPadding']//preceding::div[@id='nav-global-location-toaster-script-container']")); 
+	 WebElement XpathPreceding2=driver.findElement(By.xpath("//span[@id='glow-ingress-line2']//preceding::span[@id='glow-ingress-line1']")); 
+	 WebElement XpathPreceding3=driver.findElement(By.xpath("//span[@class='hm-icon-label']//preceding::div[@id='nav-flyout-icp']")); 
+
+	//parent
+     WebElement XpathParentMethod1=driver.findElement(By.xpath("//div[@id='nav-cart-count-container']//parent::a")); 
+     WebElement XpathParentMethod2=driver.findElement(By.xpath("//input[@id='nav-search-submit-button']//parent::span[@id='nav-search-submit-text']")); 
+     WebElement XpathParentMethod3=driver.findElement(By.xpath("//option[@value='search-alias=aps']//parent::select")); 
+
+     //child
+     WebElement XpathChild1=driver.findElement(By.xpath("//div[@class=\"nav-line-1-container\"]//child::span[@id='nav-link-accountList-nav-line-1']")); 
+     WebElement XpathChild2=driver.findElement(By.xpath("//a[@id='nav-link-accountList']//child::span[@class='nav-line-2 ']")); 
+     WebElement XpathChild3=driver.findElement(By.xpath("//div[@id='nav-tools']//child::a[@id='nav-cart'] ")); 
+
+   //ancestor
+     WebElement XpathAncestor1=driver.findElement(By.xpath("//span[@class='hm-icon-label'] //ancestor::div[@id='nav-main']")); //All
+     WebElement XpathAncestor2=driver.findElement(By.xpath("//span[@id='glow-ingress-line2']//ancestor::a[@id='nav-global-location-popover-link']")); //india
+     WebElement XpathAncestor3=driver.findElement(By.xpath("//span[@class=\"icp-nav-link-inner\"]//ancestor::div[@id='nav-tools']")); 
+
+     
+     //Descendant
+     WebElement XpathDescendant1=driver.findElement(By.xpath("//span[@class=\"nav-line-2\"]//descendant::div[text()='EN']")); 
+     WebElement XpathDescendant2=driver.findElement(By.xpath("//a[@id='nav-global-location-popover-link']//descendant::span[@id='glow-ingress-line2']")); 
+     WebElement XpathDescendant3=driver.findElement(By.xpath("//div[@id='nav-main']//descendant::span[@class='hm-icon-label']")); 
+
+   //following-sibling                                               
+     WebElement Xpathfollowing_sibling1=driver.findElement(By.xpath("//div[@class='nav-line-1-container']//following-sibling::span[@class='nav-line-2 ']")); 
+     WebElement Xpathfollowing_sibling2=driver.findElement(By.xpath("//span[@id='glow-ingress-line1']//following-sibling::span[@id='glow-ingress-line2']")); 
+     WebElement Xpathfollowing_sibling3=driver.findElement(By.xpath("//div[@class='nav-search-facade']//following-sibling::select[@id='searchDropdownBox']")); 
+
+     //preceding-sibling
+     WebElement Xpathpreceding_sibling1=driver.findElement(By.xpath("//span[@class='nav-line-2 ']//preceding-sibling::div[@class='nav-line-1-container']")); 
+     WebElement Xpathpreceding_sibling2=driver.findElement(By.xpath("//span[@id='glow-ingress-line2']//preceding-sibling::span[@id='glow-ingress-line1']")); 
+     WebElement Xpathpreceding_sibling3=driver.findElement(By.xpath("//select[@id='searchDropdownBox']//preceding-sibling::div[@class='nav-search-facade']")); 
+
+     
+     
+     
 	}	
 	
 	public static void main(String[] args) {
